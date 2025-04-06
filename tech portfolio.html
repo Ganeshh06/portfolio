@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f2027; /* Gradient background */
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        header button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        header button:hover {
+            background-color: #ff3b2f;
+        }
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            animation: bounce 2s infinite;
+        }
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .about p {
+            font-size: 1rem;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .projects {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .project-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .project-card p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+        .contact {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact button:hover {
+            background-color: #ff3b2f;
+        }
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #ccc;
+            animation: fadeIn 2s ease-in-out;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hi, I'm Ganesh Prajapati</h1>
+        <p>A 1st-year B.Tech CS student passionate about technology and coding.</p>
+        <button onclick="alert('Thank you for visiting my portfolio!')">Contact Me</button>
+    </header>
+
+    <section class="about">
+        <img src="image.jpg.jpg" alt="Your Photo">
+        <h2>About Me</h2>
+        <p>Hello! I'm a 1st-year B.Tech CS student exploring the world of technology. I enjoy learning programming, building projects, and solving problems through code.</p>
+    </section>
+
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A hotel menu program where customers can order, check bills, and make payments independently.</p>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A simple calculator application built using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A portfolio website showcasing my skills, projects, and contact information.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +91 9826364992</p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_abhisek_06/?__pwa=1" target="_blank" style="color: #ff6f61;">Click Here</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abhisek-prajapat-541b67328" target="_blank" style="color: #ff6f61;">Click Here</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ganesh Prajapati. All rights reserved.</p>
+    </footer>
+</body>
+</html>
